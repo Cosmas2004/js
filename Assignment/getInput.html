@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    background: #f0f2f5;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header{
+    margin-top: 5rem;
+}
+.header h2{
+    color: #1663be;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.header p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.login-body{
+    background-color:#fff;
+    background-size: 300px;
+    height: 350px;
+    margin-left: 450px;
+    margin-right: 450px;
+    border-radius: 5px;
+    transform: translateY(25px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+#demo{
+    text-align: left;
+    margin-top: 30px;
+    padding: 10px 100px;
+    border-radius: 4px;
+    border: 0.5px solid lightgray;
+    font-size: 15px;
+}
+::placeholder{
+    color: lightgrey;
+    transform: translateX(-50px);
+}
+input[type=password]{
+    margin-top: 10px;
+    text-align: left;
+    padding: 10px 110px;
+    border-radius: 4px;
+    border: 0.5px solid lightgray;
+}
+p.btn1 a{
+    padding: 13px 167px;
+    border-radius: 4px;
+    color: #fff;
+    background:#1a25be;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    text-decoration-line: none;
+}
+p.btn1 a:hover{
+    background:darkgray;
+    color: #fff;
+    border: 1px solid #1a25be;
+    cursor: pointer;
+}
+p a{
+    margin-left: 280px;
+    text-decoration-line: none;
+    color: #1a25be;
+}
+.line hr{
+    margin: 0 47px 0 47px;
+    background: lightgrey;
+}
+#btn2{
+    text-decoration-line: none;
+    padding: 13px 40px;
+    color: #fff;
+    background: rgb(13, 199, 53);
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+}
+#btn2:hover{
+    background-color:#fff;
+    color:rgb(13, 199, 53);
+    border: 1px solid rgb(13, 199, 53);
+    cursor: pointer;
+}
+p.p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    transform: translateY(15px);
+}
+.greetingClass{
+    font-size: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    transition: 0.4s ease-in-out;
+}
+@media only screen and (max-width:750px){
+    .header{
+        margin-top: 20px;
+    }
+    .login-body{
+        margin: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <p class="p">WELCOME!!!</p>
+    <div class="login-body">
+        <form action="#" onclick="greetUser()">
+                <input type="text" id="demo" value="" placeholder="FullName"><br><br>
+                <input type="password" placeholder="Password"><br><br>
+                <p> <a href="#">Forget Password?</a></p> <br> <br>
+            <label for="submit">
+                <input type="submit" id="btn2">
+            </label>
+        </form>    
+        <p id="getTime"></p>
+    </div>
+    <script>
+        const inputName = document.getElementById("demo");
+        const myButton = document.getElementById("btn");
+        const time = document.getElementById("getTime");
+    
+        function greetUser() {
+            const currentHour = new Date().getHours();
+    
+            if (currentHour < 12) {
+                time.innerHTML = `Goodmorning, ${inputName.value}`;
+                time.classList.add('greetingClass')
+            } else if (currentHour < 16) {
+                time.innerHTML = `Goodafternoon, ${inputName.value}`; 
+                time.classList.add('greetingClass')
+            } else { 
+                time.innerHTML = `Goodevening, ${inputName.value}`; 
+                time.classList.add('greetingClass')
+            } 
+        } 
+    </script> 
+    </body>
+</html>

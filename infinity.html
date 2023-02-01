@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript number</h2>
+    <p>infinity is return if you calculate a number outside the largest number</p>
+    <div id="demo"></div>
+    <script>
+        let mynumber =2;
+        let txt ="";
+        while (mynumber != Infinity )  {
+            mynumber = mynumber * mynumber;
+            txt = txt + mynumber + "<br>";
+            document.getElementById('demo').innerHTML= txt;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 8px 80px;
+            border-radius: 12px;
+            border: none;
+            background: skyblue;
+            color: white;
+            font-weight: 200;
+        }
+        button:hover{
+            padding: 8px 80px;
+            border-radius: 12px;
+            border: solid 1px black;
+            background: green;
+            color: black;
+            font-weight: 200;
+        }
+        #demo{
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 1px 4px 2px darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Math.random</h2>
+
+    <p>Every time you click the button, getRndInteger(min max) returns a random number between 0 to 9 (both included):</p>
+
+    <button
+    onclick="document.getElementById('demo').innerHTML =
+    getRndInteger(0,100)">Click me</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        var x=10;
+{
+    var x =2;
+}
+document.getElementById('demo').innerHTML= x+x;
+    </script> -->
+    <h2>javascript hoisting</h2>
+    <p>with <b>let</b>,you cannont use a varieblre before is it declear</p>
+    <p id="demo"></p>
+    <script>
+        try {
+            let CarName ="volvo";
+
+              CarName ="saab";
+
+    }
+        catch(err) {
+            document.getElementById("demo").innerHTML =err;
+        }
+    </script>
+
+</body>
+</html>

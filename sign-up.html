@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    text-align: center;
+}
+.header h2{
+    color: #1663be;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.header p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.contact-right form{
+    width: 50%;
+    margin-left: 450px;
+    max-width: 450px;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: darkgrey;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    background:#1a25be;
+    border: none;
+}
+form .btn2:hover{
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #1a25be;
+    color: #1a25be;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>facebook</h2>
+        <p>Facebook helps you to connect and<br> share with the people in your life.</p>
+    </div>
+    <div>
+    <div class="contact-right">
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <p id="demo"></p>
+
+        <script type="module">
+        import {name,email} from "./person.js";
+        let text = "My name is " + name + ", i am " + email + ".";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript template literals</h2>
+    <p>template literals allows variables in strings </p>
+    <p id="demo"></p>
+    <p id="mydate"></p>
+    <p>template literals are not supported in internet explorer</p>
+    <script>
+        let header = "template literals";
+        let tags = ["template literals ", "javascript", "es6", "myitems"];
+        let html = `<h2>${header}</h2>`;
+        for (const x of tags){
+            html += `<li>${x}</li>`;
+            html += `</ul>`;
+            document.getElementById('demo').innerHTML = html;
+            document.getElementById('mydate').innerHTML= new Date()
+        }
+
+
+    </script>
+</body>
+</html>

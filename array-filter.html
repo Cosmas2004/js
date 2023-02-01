@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript array filter</h1>
+    <p id="demo"></p>
+    <script>
+        const numbers = [ 45, 5, 8, 16, 25 ];
+        const over18 = numbers.filter(myfunction);
+        document.getElementById('demo').innerHTML= over18;
+        function myfunction(value, index, array){
+            return value >18;
+        }
+    </script>
+</body>
+</html>

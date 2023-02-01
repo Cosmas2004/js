@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Assignment</title>
+</head>
+<style>
+    *{
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body{
+        background:gray;
+        padding: 0;
+        margin: 0;
+    }
+    h1{
+        text-align: center;
+        color:white;
+
+    }
+    .mytext{
+        background: rgb(31, 28, 17); 
+        padding:3rem 0;
+        text-transform: uppercase;
+
+    }
+    .section1{
+        background: white;
+        height: 100vh;
+        margin: 0 20%;
+        border-radius: 1rem;
+        
+    }
+    .myarray{
+        text-align: center;
+        box-shadow: 0 1px 20px 1px rgb(199, 198, 198);
+        margin: 0 5%;
+        height: 50vh;
+        overflow-x: hidden;
+
+    }
+    .myarray h2{
+        box-shadow: 0 3px 5px 3px rgb(202, 201, 201);
+        padding: 1.5rem 0;
+    }
+    .mybutton{
+        padding: 1.1rem 1rem;
+        background:transparent;
+        border-radius: 1rem;
+        border: none;
+        font-size: 1.5rem;
+        color:black;
+        font-weight: lighter;
+    }
+    .mybutton:hover{
+        background: rgb(31, 28, 17); 
+        color: white;
+        text-shadow: 1px 1px 6px burlywood;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+    .css{
+
+        background-color: blue;
+    }
+</style>
+<body>
+    <main>
+        <div class="section1">
+         <div class="mytext">
+       <h1><span>Hello</span> , my name is Pius udomah.</h1>
+    </div>
+       <div class="myarray">
+        <h2>Some common names in the world</h2>
+
+        <ol>
+            <li>
+                James
+            </li>
+            <li>
+                Robert
+            </li>
+            <li>
+                John
+            </li>
+            <li>
+                Micheal
+            </li>
+        </ol>
+        <button class="mybutton" onclick="clickme()">Click to view more</button>
+
+       </div>
+
+    </div>
+    </main>
+    <script>
+            function clickme(){
+                const  city =["David", "William", "Richard", "Joseph",
+                           "Charles", "Christopher", "Daniel", "Mathew", "Anthony",
+                           "Donald", "Steven", "Paul", "Andrew", "Joshua", "Kevin"
+                           ];
+        let myarray = city.length;
+        let text = "<ol>";
+            for (let i = 0; i <myarray; i++){
+                text += "<li>" + city[i] +"</li>";
+            }
+            text += "</ol>"
+
+           var declare =   document.querySelector(".myarray")
+           declare.getElementsByClassName = "clickme"(document.writeln(myarray+=city && text))
+           
+
+            }
+
+
+    </script>
+</body>
+</html>
+
